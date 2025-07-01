@@ -28,12 +28,18 @@
     <main class="container">
         <section class="about">
             <h2>👨‍💻 About Me</h2>
-            <div class="code-snippet">
-                <pre><code class="language-python">
-class Developer:
+                <div class="code-container">
+        <div class="code-display" id="codeDisplay"></div>
+        <div class="output" id="output">
+            <div class="output-line">Let's build something amazing together!</div>
+        </div>
+    </div>
+
+    <script>
+        const code = `class Developer:
     def __init__(self):
         self.name = "Tadiwanashe Songore"
-        self.role = "Computer Science Student & Developer"
+        self.role = "Computer Science Student & Full-Stack Developer"
         self.passion = "Building innovative solutions"
         self.skills = ["Web Dev", "Mobile Apps", "AI/ML", "Automation"]
         
@@ -41,9 +47,56 @@ class Developer:
         print("Let's build something amazing together!")
 
 me = Developer()
-me.greet()
-                </code></pre>
-            </div>
+me.greet()`;
+
+        const codeDisplay = document.getElementById('codeDisplay');
+        const output = document.getElementById('output');
+        let i = 0;
+
+        function typeWriter() {
+            if (i < code.length) {
+                codeDisplay.innerHTML = code.substring(0, i) + '<span class="cursor"></span>';
+                i++;
+                setTimeout(typeWriter, Math.random() * 50 + 30);
+            } else {
+                // Remove cursor after typing completes
+                codeDisplay.innerHTML = code;
+                
+                // Wait a moment, then show output
+                setTimeout(() => {
+                    output.style.display = 'block';
+                    
+                    // After showing output, transform to final display
+                    setTimeout(() => {
+                        document.body.innerHTML = `
+                            <div class="final-display">
+                                <h1>Tadiwanashe Songore</h1>
+                                <div class="profile-card">
+                                    <div class="role">Computer Science Student & Full-Stack Developer</div>
+                                    <div class="passion">"Building innovative solutions"</div>
+                                    <div class="skills-section">
+                                        <div class="skills-title">Skills:</div>
+                                        <ul class="skills-list">
+                                            <li>• Web Development</li>
+                                            <li>• Mobile Applications</li>
+                                            <li>• AI/ML Solutions</li>
+                                            <li>• Automation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="greeting">
+                                        Let's build something amazing together!
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }, 2000);
+                }, 1000);
+            }
+        }
+
+        // Start the typing animation
+        setTimeout(typeWriter, 500);
+    </script>
             <p>Passionate about software development, web technologies, and mobile applications. Constantly learning and improving my skills to build innovative projects.</p>
         </section>
 
