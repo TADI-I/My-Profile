@@ -98,11 +98,20 @@ header {
     overflow: hidden;
 }
 
-.code-display {
+#code-display {
+    margin: 0;
+    white-space: pre-wrap;
     min-height: 200px;
-    white-space: pre;
-    overflow: hidden;
-    position: relative;
+    color: #d4d4d4;
+}
+
+#profile-display {
+    display: none;
+    animation: fadeIn 1s ease-in;
+}
+
+.hidden {
+    display: none;
 }
 
 .cursor {
