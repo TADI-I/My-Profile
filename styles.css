@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --highlight-color: #e94560;
+    --text-color: #f1f1f1;
+    --text-muted: #b8b8b8;
+    --card-bg: #16213e;
+    --input-bg: #0f3460;
+    --border-color: #2a3a5e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--text-color);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--highlight-color);
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, var(--highlight-color), #f39c12);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--highlight-color);
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--highlight-color), var(--accent-color));
+}
+
+/* Hire Me Section */
+.hire-me {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hire-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.hire-text p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.skills-list i {
+    color: var(--highlight-color);
+}
+
+.hire-form {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--highlight-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+/* Projects Section */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--text-color);
+}
+
+.filter-btn:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    border-color: var(--highlight-color);
+}
+
+.filter-btn.active {
+    background-color: var(--highlight-color);
+    color: white;
+    border-color: var(--highlight-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 180px;
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.project-lang {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-links a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: linear-gradient(to right, var(--highlight-color), var(--accent-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(233, 69, 96, 0.3);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.loader {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / -1;
+    color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+    .profile-header {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .hire-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
