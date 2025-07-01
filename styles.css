@@ -87,6 +87,117 @@ header {
     color: var(--highlight-color);
 }
 
+.code-container {
+    background-color: #252526;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-display {
+    min-height: 200px;
+    white-space: pre;
+    overflow: hidden;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #569cd6;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.output {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    display: none;
+    color: #4ec9b0;
+}
+
+.output-line {
+    margin: 5px 0;
+}
+
+/* Final Display Styles */
+.final-display {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-display h1 {
+    color: #569cd6;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.profile-card {
+    background-color: #252526;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.role {
+    color: #9cdcfe;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.passion {
+    margin: 20px 0;
+    color: #ce9178;
+    font-style: italic;
+}
+
+.skills-section {
+    margin-top: 30px;
+}
+
+.skills-title {
+    color: #4ec9b0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    color: #d4d4d4;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills-list li:before {
+    content: "•";
+    color: #569cd6;
+    position: absolute;
+    left: 0;
+}
+
 section {
     margin: 40px 0;
 }
