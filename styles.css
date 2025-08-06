@@ -10,6 +10,10 @@
     --border-color: #2a3a5e;
 }
 
+.project-icon i {
+    font-size: 64px;
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -6,6 +6,7 @@
     <title>Tadiwanashe Songore | GitHub Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -80,6 +81,7 @@
                     <h3>📱 Mobile</h3>
                     <div class="tech-badges">
                         <span class="tech-badge"><i class="devicon-android-plain"></i> Android</span>
+                        <span class="tech-badge"><i class="devicon-apple-plain"></i> IOS</span>
                     </div>
                 </div>
                 
@@ -148,13 +150,13 @@
         </div>
     </footer>
 <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set current year
-            document.getElementById('year').textContent = new Date().getFullYear();
-            
-            // Code animation
-            const code = `class Developer:
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Code animation
+        const code = `class Developer:
     def __init__(self):
         self.role = "Computer Science Student & Full-Stack Developer"
         self.passion = "Building innovative solutions"
@@ -166,29 +168,37 @@
 me = Developer()
 me.greet()`;
 
-            const codeDisplay = document.getElementById('code-display');
-            const profileDisplay = document.getElementById('profile-display');
-            let i = 0;
+        const codeDisplay = document.getElementById('code-display');
+        const profileDisplay = document.getElementById('profile-display');
+        let i = 0;
 
-            function typeWriter() {
-                if (i < code.length) {
-                    codeDisplay.textContent = code.substring(0, i) + '█';
-                    i++;
-                    setTimeout(typeWriter, Math.random() * 50 + 30);
-                } //else {
-                    //codeDisplay.textContent = code;
-                    //setTimeout(() => {
-                        //codeDisplay.classList.add('hidden');
-                        //profileDisplay.classList.remove('hidden');
-                    //}, 
-                    1500);
-                }
+        function typeWriter() {
+            if (i < code.length) {
+                codeDisplay.textContent = code.substring(0, i) + '█';
+                i++;
+                setTimeout(typeWriter, Math.random() * 50 + 30);
+            } else {
+                codeDisplay.textContent = code; // final code
+                setTimeout(() => {
+                    codeDisplay.classList.add('hidden');
+                    profileDisplay.classList.remove('hidden');
+
+                    // Reset and loop
+                    setTimeout(() => {
+                        codeDisplay.classList.remove('hidden');
+                        profileDisplay.classList.add('hidden');
+                        i = 0;
+                        typeWriter(); // start again
+                    }, 3000); // how long to show profile before restarting
+                }, 1500);
             }
-            
-            // Start typing animation
-            setTimeout(typeWriter, 1000);
-            
-        });
-    </script>
+        }
+
+        // Start typing animation
+        setTimeout(typeWriter, 1000);
+    });
+</script>
+
+
 </body>
 </html>
