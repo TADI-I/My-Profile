@@ -184,16 +184,16 @@
 
         .section-line { flex: 1; height: 1px; background: var(--border); }
 
-        .code-animation-container {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            min-height: 215px;
-            position: relative;
-            overflow: hidden;
-        }
+       .code-animation-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
 
         .code-animation-container::before {
             content: '';
@@ -1103,18 +1103,24 @@
         </div>
         <div class="projects-grid" style="margin-bottom:1.5rem">
             <div class="project-card">
-                <h3>First Year Council Marketplace</h3>
-                <p>Marketplace platform for TUT students to buy and sell goods and services across campuses.</p>
-                <div class="project-lang">
-                    <span class="lang-dot" style="background:#f7df1e"></span>
-                    JavaScript / TypeScript
-                </div>
-                <div class="project-links">
-                    <a href="https://firstyearcouncil.co.za" target="_blank">
-                        <svg width="12" height="12"><use href="#ico-globe"/></svg> Live
-                    </a>
-                </div>
-            </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem">
+        <h3>First Year Council Marketplace</h3>
+        <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.15rem 0.55rem;background:rgba(96,200,240,0.08);border:1px solid rgba(96,200,240,0.2);border-radius:20px;color:var(--accent2)">Live</span>
+    </div>
+    <p>Marketplace platform for TUT students to buy and sell goods and services across campuses.</p>
+    <div class="project-lang" style="margin-top:0.25rem">
+        <span class="lang-dot" style="background:#3178c6"></span>
+        React · TypeScript · Node.js · MongoDB
+    </div>
+    <div class="project-links">
+        <a href="https://firstyearcouncil.co.za" target="_blank">
+            <svg width="12" height="12"><use href="#ico-globe"/></svg> Live
+        </a>
+        <a href="https://github.com/TADI-I" target="_blank">
+            <svg width="12" height="12"><use href="#ico-github"/></svg> GitHub
+        </a>
+    </div>
+</div>
             <div class="project-card">
                 <h3>TUT Labs Management App</h3>
                 <p>Cross-platform mobile app for tutor scheduling, lab status updates, geofencing, and announcements.</p>
@@ -1129,13 +1135,57 @@
                 </div>
             </div>
             <div class="project-card">
-                <h3>ScanPayGo</h3>
-                <p>Retail self-checkout mobile app with iOS (SwiftUI), Android (Kotlin/Compose), React admin dashboard, and Node.js / MongoDB backend with Paystack payments.</p>
-                <div class="project-lang">
-                    <span class="lang-dot" style="background:#FA7343"></span>
-                    Swift / Kotlin / React / Node.js
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem">
+                    <h3>FindMyDocs</h3>
+                    <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.15rem 0.55rem;background:rgba(96,200,240,0.08);border:1px solid rgba(96,200,240,0.2);border-radius:20px;color:var(--accent2)">Live</span>
+                </div>
+                <p>South Africa's document recovery network — a privacy-first platform connecting finders and owners of lost IDs, passports, and driver's licences.</p>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.35rem;margin:0.25rem 0">
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Document numbers are never stored — hashed to an irreversible HMAC-SHA256 fingerprint on arrival, original discarded immediately</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Blind matching system — fingerprints the owner's search input and checks for a hash match, no plaintext ever compared</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Paystack R50 Secure Connection Fee gates contact detail reveal — finder and owner connect directly after payment</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Full database breach reveals nothing usable — privacy by design, not policy</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>React / TypeScript frontend, Node.js / Express backend, MongoDB</li>
+                </ul>
+                <div class="project-lang" style="margin-top:0.25rem">
+                    <span class="lang-dot" style="background:#3178c6"></span>
+                    React · TypeScript · Node.js · MongoDB · HMAC-SHA256
                 </div>
                 <div class="project-links">
+                    <a href="https://lost-id.vercel.app" target="_blank">
+                        <svg width="12" height="12"><use href="#ico-globe"/></svg> Live
+                    </a>
+                    <a href="https://github.com/TADI-I" target="_blank">
+                        <svg width="12" height="12"><use href="#ico-github"/></svg> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card" style="border-color:rgba(200,240,96,0.35);background:rgba(200,240,96,0.025)">
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem">
+                    <h3 style="color:var(--accent)">JAC ScanPayGo</h3>
+                    <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.15rem 0.55rem;background:rgba(200,240,96,0.12);border:1px solid rgba(200,240,96,0.3);border-radius:20px;color:var(--accent)">Live on App Store &amp; Play Store</span>
+                </div>
+                <p>Sole developer of a production retail self-checkout platform — built across four layers simultaneously. Customers scan products, manage a cart, and pay in-store without cashier assistance.</p>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.35rem;margin:0.25rem 0">
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>iOS app (Swift / SwiftUI) &amp; Android app (Kotlin / Jetpack Compose)</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>React / TypeScript admin dashboard — Dashboard, Analytics, Transactions, Products, Stores, Users, Reports, Settings</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Node.js / Express backend with MongoDB, Redis caching, and audit logging</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Paystack payment integration — subaccount splits, HMAC webhook verification, reversals &amp; refunds</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Promotions &amp; discounts engine — percentage, flat, and bundle types; GPS-sorted mobile browsing</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Per-store max cart quantity enforcement across all four layers</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Soft-delete store workflow with 48-hour restore window and cron cleanup</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Security hardening — rate limiting, mongo-sanitize, OAuth / token auth</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Bulk CSV product upload with BOM / CRLF / TSV / duplicate barcode handling</li>
+                    <li style="font-size:0.8rem;color:var(--muted);padding-left:0.9rem;position:relative"><span style="position:absolute;left:0;top:0.6em;width:5px;height:1px;background:var(--accent);display:block"></span>Managed full SDLC solo — architecture, development, testing, App Store &amp; Play Store deployment</li>
+                </ul>
+                <div class="project-lang" style="margin-top:0.25rem">
+                    <span class="lang-dot" style="background:#FA7343"></span>
+                    Swift · Kotlin · React · TypeScript · Node.js · MongoDB · Redis
+                </div>
+                <div class="project-links">
+                    <a href="https://jacscanpaygo.co.za" target="_blank">
+                        <svg width="12" height="12"><use href="#ico-globe"/></svg> Website
+                    </a>
                     <a href="https://github.com/TADI-I" target="_blank">
                         <svg width="12" height="12"><use href="#ico-github"/></svg> GitHub
                     </a>
