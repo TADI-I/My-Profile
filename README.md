@@ -9,7 +9,7 @@ This project is a personal portfolio website for **Tadiwanashe Songore**, a Comp
 ## 🧱 Folder Structure
 
 ```
-project-root/
+project-root/ 
 │
 ├── index.html         # Main HTML structure
 ├── styles.css         # Styles for layout, animations, and responsiveness
